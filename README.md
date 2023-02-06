@@ -1,5 +1,5 @@
 # SistemasMultiagentes
-Repositório do porjeto da cadeira de Sistemas Inteligentes 
+Repositório do projeto da cadeira de Sistemas Inteligentes 
 
 ## Grupo:
 * [Camila Xavier de Medeiros (cxm)](https://github.com/cxmedeiros)
