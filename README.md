@@ -1,4 +1,4 @@
-# SistemasEspecialistas
+# SistemasMultiagentes
 Repositório do porjeto da cadeira de Sistemas Inteligentes 
 
 ## Grupo:
