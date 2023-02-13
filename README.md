@@ -1,4 +1,4 @@
-# SistemasMultiagentes
+# Sistemas Inteligentes - Projeto
 Repositório do projeto da cadeira de Sistemas Inteligentes 
 
 ## Grupo:
