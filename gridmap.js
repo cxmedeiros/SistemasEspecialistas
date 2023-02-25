@@ -84,4 +84,26 @@ class GridMap{
       }
     }
   }
+  
+  resetAgent(){
+    this.agent.i = this.food.i;
+    this.agent.j = this.food.j;
+  }
+  
+  resetCurrentSearchTile(){
+    this.currentTileOfSearch = this.map[this.agent.i][this.agent.j];
+  }
+  
+  generateNewFood(){
+    let food_i = 0
+    let food_j = 0
+    
+    do{
+      food_i = Math.floor(random(this.rows));
+      food_j = Math.floor(random(this.cols));
+    } while(this.map[food_i][food_j].cost == -1 || 
+            (this.agent.i == food_i && this.agent.j == food_j));
+    
+    this.food = new Food(food_i, food_j);
+  }
 }

@@ -3,7 +3,7 @@ class Agent{
     // i and j are the matrix position of the agent
     this.i = i;
     this.j = j;
-    
+     
     // cellWidth and cellHeight are the sizes of the width and height of the tiles in pixels 
     this.cellWidth = cellWidth;
     this.cellHeight = cellHeight
@@ -78,10 +78,10 @@ class Agent{
   // defines the speed of the agent depending on the terrain
   defineSpeed(){
     if(this.current.cost == 1){
-      this.speed = 1;
+      this.speed = 2;
     }
     else if(this.current.cost == 5){
-      this.speed = 0.5;
+      this.speed = 1;
     }
     else if(this.current.cost == 10){
       this.speed = 0.2;
@@ -123,5 +123,5 @@ class Agent{
       this.pos = this.foodPos;
       return true;
     }
-  }    
+  }
 }
