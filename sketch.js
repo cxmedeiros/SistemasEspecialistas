@@ -39,33 +39,30 @@ function draw() {
       searchState = true;
     }
     if (keyIsDown(98) || keyIsDown(50)) { // 2
-      search = new DFS();
+      search = new DFS(gridMap);
       path = new Path(search);
       preloadState = false;
       searchState = true;
     }
     if (keyIsDown(99) || keyIsDown(51)) { // 3
-      search = new UniformCost();
+      search = new UniformCost(gridMap);
       path = new Path(search);
       preloadState = false;
       searchState = true;
     }
     if (keyIsDown(100) || keyIsDown(52)) { // 4
-      search = new Greedy();
+      search = new Greedy(gridMap);
       path = new Path(search);
       preloadState = false;
       searchState = true;
     }
     if (keyIsDown(101) || keyIsDown(53)) { // 5
-      search = new AStar();
+      search = new AStar(gridMap);
       path = new Path(search);
       preloadState = false;
       searchState = true;
     }
-    
-    
   }
-  
   
   // The agent is searching for the food
   if(searchState){

@@ -70,19 +70,38 @@ class BFS extends Search{
 }
 
 class DFS extends Search{
-   
+   constructor(gridMap){
+     super(gridMap);
+   }
+   find(){ //TODO: needs implementation
+     return;
+   }
 } 
 
 class UniformCost extends Search{
-
+   constructor(gridMap){
+     super(gridMap);
+   }
+   find(){ //TODO: needs implementation
+     return;
+   }
 } 
 
 class Greedy extends Search{
-  
+  constructor(gridMap){
+     super(gridMap);
+   }
+   find(){ //TODO: needs implementation
+     return;
+   }
 }
 
 
 class AStar extends Search{
-
-
+  constructor(gridMap){
+     super(gridMap);
+   }
+   find(){ //TODO: needs implementation
+     return;
+   }
 } 
