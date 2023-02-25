@@ -8,6 +8,7 @@ class Agent{
     this.cellWidth = cellWidth;
     this.cellHeight = cellHeight
     
+    this.count = 0;
     // pos is the center point of the tile
     this.pos =  createVector(
       this.i * this.cellWidth + this.cellWidth / 2, 
@@ -78,13 +79,13 @@ class Agent{
   // defines the speed of the agent depending on the terrain
   defineSpeed(){
     if(this.current.cost == 1){
-      this.speed = 2;
+      this.speed = 5;
     }
     else if(this.current.cost == 5){
-      this.speed = 1;
+      this.speed = 2;
     }
     else if(this.current.cost == 10){
-      this.speed = 0.2;
+      this.speed = 1;
     }
   }
   
@@ -102,6 +103,7 @@ class Agent{
       this.pos.add(this.velocity);
     }
     else{
+      this.count += this.current.cost; 
       this.pos = this.targetPos;
       this.current = this.target;
       this.target = this.route.shift();
@@ -119,6 +121,7 @@ class Agent{
       return false; 
     }
     else{
+      this.count += this.target.cost;
       console.log("Food reached!!!")
       this.pos = this.foodPos;
       return true;

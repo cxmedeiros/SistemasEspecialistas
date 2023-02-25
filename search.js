@@ -74,16 +74,41 @@ class DFS extends Search{
      super(gridMap);
    }
    find(){ //TODO: needs implementation
-     return;
+     if(this.queue.length > 0){
+       if(this.currentTile !== this.endTile){
+        this.currentTile = this.queue.shift();
+        this.currentTile.marked = false;
+        this.currentTile.visited = true;
+        
+        let neighbors = this.currentTile.neighbors;
+        for(let neighbor of neighbors){
+            if(!neighbor.marked &&  !neighbor.visited && neighbor.cost != -1){
+              neighbor.previous = this.currentTile;
+              neighbor.marked = true;
+              this.queue.unshift(neighbor);
+            }
+       }
+     }
+     else{
+        console.log("Food found!!!")
+        this.found = true;
+        return;
+     }
    }
-} 
+     else{
+      console.log("No solution found");
+      noLoop();
+      return;
+    }
+ }
+}
 
 class UniformCost extends Search{
    constructor(gridMap){
      super(gridMap);
    }
    find(){ //TODO: needs implementation
-     return;
+     
    }
 } 
 

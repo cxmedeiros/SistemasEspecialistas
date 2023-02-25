@@ -16,18 +16,21 @@ function sleep(milliseconds) {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  let canvas = createCanvas(600, 600);
+  canvas.position(150,30)
   gridMap = new GridMap(20,20);
   search = null;
   path = null;
   menuPage = new MenuPage();
   endMenu = new EndMenu();
   preloadState = true;
+  board = new Board();
 }
 
 function draw() {
   
   background(220);
+  // board.draw(gridMap.agent.count);
   
   if(preloadState){
     background(0);
