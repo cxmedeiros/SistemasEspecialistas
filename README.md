@@ -8,3 +8,4 @@ Repositório do projeto da cadeira de Sistemas Inteligentes
 * [Gabriel Lopes (gls6)](https://github.com/Gabriellopess)
 * [Lucas de Souza (lsb4)](https://github.com/lsb4)
 * [Lucas Mota Mendes (lmm3)](https://github.com/lmm3)
+
