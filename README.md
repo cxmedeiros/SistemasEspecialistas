@@ -11,8 +11,10 @@ Repositório do projeto da cadeira de Sistemas Inteligentes
 
 
 O projeto consiste em fazer um Agente Autônomo que busca uma comida com diferentes 5 algoritmos: Largura, Profundidade, Custo Uniforme, Gulosa e A*.
-Rode o código no P5.js, um web server.
 
-![image](https://user-images.githubusercontent.com/89268381/221685083-125256ff-2ac1-4642-abbb-b46e52c12594.png)
+Rode o código no P5.js editor.
+demonstração: https://editor.p5js.org/lmm3/full/6g2TZ2GKy
+
+![image](https://user-images.githubusercontent.com/89268381/221685881-4a98087a-be25-4901-9a00-fd747f67aae5.png)
 
 
