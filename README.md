@@ -1,5 +1,5 @@
 # Sistemas Inteligentes - Projeto
-Repositório do projeto da cadeira de Sistemas Inteligentes 
+Repositório do projeto da cadeira de Sistemas Inteligentes - IF684EC
 
 ## Grupo:
 * [Camila Xavier de Medeiros (cxm)](https://github.com/cxmedeiros)
