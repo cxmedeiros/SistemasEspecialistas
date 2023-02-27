@@ -1,10 +1,12 @@
 class GridMap{
   constructor(rows, cols){
+    this.gridWidth = 600;
+    this.gridHeight = 600;
     this.map = [];
     this.rows = rows;
     this.cols = cols;
-    this.cellWidth = width/this.rows;
-    this.cellHeight = height/this.cols;
+    this.cellWidth = this.gridWidth/this.rows;
+    this.cellHeight = this.gridHeight/this.cols;
     
     this.map = new Array(this.rows);
     
@@ -105,5 +107,15 @@ class GridMap{
             (this.agent.i == food_i && this.agent.j == food_j));
     
     this.food = new Food(food_i, food_j);
+  }
+  
+  resetHeuristics(){
+    for(let i = 0; i < this.rows; i++){
+      for(let j = 0; j < this.cols; j++){
+        this.map[i][j].f = 0;
+        this.map[i][j].g = 0;
+        this.map[i][j].h = 0;
+      }
+    }
   }
 }

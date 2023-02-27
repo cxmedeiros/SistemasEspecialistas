@@ -1,18 +1,35 @@
 class EndMenu{
+  constructor(){
+    this.text = [
+      'To create a new food on the grid press "Space"',
+      'To return to the main menu press "Enter"'
+    ]
+  }
   draw(){
-    let newFoodDiv = createDiv('To create a new food on the grid press "Space"');
-    newFoodDiv.position(10, 610)
-    newFoodDiv.style("font-size", "12pt");
-    newFoodDiv.style("padding", "10px");
-    newFoodDiv.style("background-color", "black");
-    newFoodDiv.style("color", "white");
     
-    let mainMenuDiv = createDiv('To return to the main menu press "Enter"');
-    mainMenuDiv.position(10, 650)
-    mainMenuDiv.style("font-size", "12pt");
-    mainMenuDiv.style("padding", "10px");
-    mainMenuDiv.style("background-color", "black");
-    mainMenuDiv.style("color", "white");
+    fill("black");
+    strokeWeight(4);
+    stroke("white");
+    rect(0, 600, 400, 100);
+    
+    fill("white");
+    strokeWeight(1);
+    stroke("black")
+    textSize(16);
+    textAlign(CENTER, CENTER);
+    text(this.text[0], 0, 600, 400, 100);
+    
+    fill("black");
+    strokeWeight(4);
+    stroke("white");
+    rect(400, 600, 400, 100);
+    
+    fill("white");
+    strokeWeight(1);
+    stroke("black")
+    textSize(16);
+    textAlign(CENTER, CENTER);
+    text(this.text[1], 400, 600, 400, 100);
     
   }
 }

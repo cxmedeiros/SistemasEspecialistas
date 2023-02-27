@@ -52,6 +52,18 @@ class Agent{
     );
   }
   
+  drawOnDescription(x, y){
+    fill("purple");
+    strokeWeight(1);
+    stroke("black");
+    ellipse(
+      x,
+      y, 
+      this.cellWidth / 2, 
+      this.cellHeight / 2
+    );
+  }
+  
   // takes the path found by the search and defines the food position and the current position
   definePath(path){
     if(this.route == null){
@@ -79,10 +91,10 @@ class Agent{
   // defines the speed of the agent depending on the terrain
   defineSpeed(){
     if(this.current.cost == 1){
-      this.speed = 5;
+      this.speed = 10;
     }
     else if(this.current.cost == 5){
-      this.speed = 2;
+      this.speed = 3;
     }
     else if(this.current.cost == 10){
       this.speed = 1;
@@ -121,7 +133,7 @@ class Agent{
       return false; 
     }
     else{
-      this.count += this.target.cost;
+      this.count += this.current.cost;
       console.log("Food reached!!!")
       this.pos = this.foodPos;
       return true;

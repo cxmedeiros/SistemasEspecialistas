@@ -17,4 +17,15 @@ class Food{
       cellHeight / 2
     );
   }
+  drawOnDescription(x, y, radius){
+    fill("yellow");
+    strokeWeight(1);
+    stroke("black");
+    ellipse(
+      x,
+      y, 
+      radius,
+      radius
+    );
+  }
 }

@@ -26,6 +26,21 @@ class Tile{
     this.j = j;
     this.cost = random_type(); // defines the type of the tile
     
+    // These are used for the Greedy, Uniform Cost and A*
+    
+    // A*
+    // f(n)  represents the estimated total cost of the cheapest path from the start node to the goal node that goes through node n. 
+    // It is defined as f(n) = g(n) + h(n)
+    this.f = 0; 
+    
+    // Uniform Cost
+    // g(n) represents the cost of the cheapest path from the start node to node n that has been found so far
+    this.g = 0;
+    
+    // Greedy 
+    // h(n) represents the heuristic estimate of the cost from node n to the goal node
+    this.h = 0;
+    
     this.neighbors = []; // all the tiles that it can traverse to
     
     // marked and visited are used for searching
@@ -39,7 +54,7 @@ class Tile{
   draw(cellWidth, cellHeight){
     strokeWeight(1);
     if(this.cost == -1){ // wall
-      fill(50);  
+      fill(70);  
     }
     else if(this.cost == 1){ // grass
       fill("#177054");
@@ -59,7 +74,33 @@ class Tile{
       strokeWeight(4);
       stroke("blue")
     }
-    rect(cellWidth * this. i, cellHeight * this. j, cellWidth)
+    rect(cellWidth * this. i, cellHeight * this. j, cellWidth);
+  }
+  
+  drawOnDescription(x, y, cellWidth, cellHeight){
+    strokeWeight(1);
+    if(this.cost == -1){ // wall
+      fill(70);  
+    }
+    else if(this.cost == 1){ // grass
+      fill("#177054");
+    }
+    else if(this.cost == 5){ // sand
+      fill("#a79776")
+    }
+    else if(this.cost == 10){ // water
+      fill("#71a0c2") 
+    }
+    stroke("black");
+    if(this.checkStatus() == 1){ //marked
+      strokeWeight(4);
+      stroke("red");
+    }
+    else if(this.checkStatus() == 2){ //visited
+      strokeWeight(4);
+      stroke("blue")
+    }
+    rect(x, y, cellWidth);
   }
   
   //checks the status of the tile to see if it was marked or visited to colour its borders
