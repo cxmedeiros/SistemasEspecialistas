@@ -10,7 +10,7 @@ Repositório do projeto da cadeira de Sistemas Inteligentes
 * [Lucas Mota Mendes (lmm3)](https://github.com/lmm3)
 
 
-* O projeto consiste em fazer um Agente Autônomo que busca uma comida com diferentes 5 algoritmos: Largura, Profundidade, Custo Uniforme, Gulosa e A*.
+O projeto consiste em fazer um Agente Autônomo que busca uma comida com diferentes 5 algoritmos: Largura, Profundidade, Custo Uniforme, Gulosa e A*.
 
 * Rode o código no P5.js editor.
 
